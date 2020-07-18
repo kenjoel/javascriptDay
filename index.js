@@ -52,6 +52,7 @@ function cutter(data){
     var days = ['Sunday','Monday','Tuesday','Wednesday','Thursday','Friday','Saturday']
     var male = ['Kwasi','Kwadwo','Kwabena','Kwaku','Yaw','Kofi','Kwame']
     var female = ['Akoswa', 'Adwoa','Abenna', 'Akua', 'Yaa', 'Afua', 'Ama']
+    var results = document.getElementById('results')
 
     var cc = parseInt(data.year.value.slice(0,2));
     var yy = parseInt(data.year.value.slice(1,4));
@@ -67,9 +68,9 @@ function cutter(data){
     console.log(finali)
     
     if(ss === 'male'){
-        console.log(days[finali] + male[finali])
+        results.innerHTML= days[finali] + "-" + male[finali]
     }else if(ss === 'female'){
-        console.log(days[finali] + female[finali])
+        results.innerHTML = days[finali] + "-" + female[finali]
     }
 }
 
