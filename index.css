@@ -1,16 +1,24 @@
-.container{
-    height: 100%;
-    width: 100%;
-}
-
-.banner{
-    position: relative;
-    background-image: url('./images/hannes-wolf-lvknf1xJkfY-unsplash.jpg');
+.jumbotron{
+    background-image: url("./images/julius-oj-0Y25HHnyVhg-unsplash.jpg");
     background-repeat: no-repeat;
     background-size: cover;
+    background-color: black;
 }
 
-#form{
-    position: absolute;
-    bottom: 0px;
+p{
+    font-size: 50px;
+}
+
+li{
+    list-style: none;
+}
+
+a{
+    color: rgb(30, 41, 41);
+    text-decoration: none;
+}
+
+a:hover{
+    background-color: green;
+    border:1px solid black;
 }

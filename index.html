@@ -9,33 +9,69 @@
 </head>
 <body>
     <div class="container">
-        <div class="banner"></div>
-        <div></div>
-    <form  class="row" enctype="multipart/form-data" action="./index.html" id="form" method="GET">
-        <div>
-            <label for="date">Date</label>
-            <input name="date" id="date" type="number" placeholder="enter date">
-        </div>
-        <div>
-            <label for="mm">Month</label>
-            <input id="mm" name="month" type="number" placeholder="enter month">
-        </div>
-        <div>
-            <label for="yy">Year</label>
-            <input id="yy" type="number" name="year" placeholder="enter year">
-        </div>
-        Gender
-        <div id="gender">
-            <label for="male">Male</label>
-            <input type="radio" name="gender" value="male">
-            <label for="female">Female</label>
-            <input type="radio" name="gender" value="female">
-        </div>
-        <button id="submit" type="submit" >Submit</button>
-        <button id="submit" type="reset">Reset</button>
-    </form>
-    <div id="response"></div>
+        <nav class="navbar justify-content-center">
+            <ul class="nav">
+                <li class="nav-item">
+                    <a class="nav-link"href="home">Home</a>
+                </li>
+            </ul>
+        </nav>
     </div>
+    <div class="row">
+        <div class="col">
+            <div class="jumbotron">
+                <p class="text-center text-white font-italic font-weight-bold font-size-36">Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid aspernatur assumenda rem illo fugit, natus, deserunt reiciendis qui dolorum unde neque. Tempora cumque minima voluptatem eligendi accusamus, beatae sint placeat.</p>
+            </div>
+        </div> 
+    </div>
+    <div class="row">
+        <div class="col-4">
+            <div class="card">
+                <div class="card-body">
+                    <h1 class="card-title">WOULD YOU LIKE TO KNOW YOUR AKAN NAME??</h1>
+                    <i class='far fa-grin-stars' class="justify-content-center" style='font-size:48px;color:rgb(128, 134, 101)'></i>
+                </div>
+            </div>
+            </div>
+            <div class="card">
+                <div class="card-title">Fill the form below to get your Akan name</div>
+                <div class="card-body">
+                    <form>
+                        <div class="form-group">
+                            <label for="date">Date</label>
+                            <input name="date" class="form-control" id="date" type="number" placeholder="enter date">
+                        </div>
+                        <div class="form-group">
+                            <label for="mm">Month</label>
+                            <input id="mm" name="month" type="number" class="form-control" placeholder="enter month">
+                        </div>
+                        <div class="form-group">
+                            <label for="yy">Year</label>
+                            <input class="form-control" id="yy" type="number" name="year" placeholder="enter year">
+                        </div>
+                        <div id="gender" class="form-group">
+                            <label for="male">Male</label>
+                            <input class="form-contol" type="radio" name="gender" value="male">
+                            <label for="female">Female</label>
+                            <input class="form-contol" type="radio" name="gender" value="female">
+                        </div>
+                        <button id="submit" type="submit" class="btn btn-primary" >Submit</button>
+                        <button id="submit" type="reset" class="btn btn-primary">Reset</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- <form  enctype="multipart/form-data" action="./index.html" id="form" method="GET">
+        
+        
+       
+        Gender
+        
+       >
+    </form> -->
+
+<script src='https://kit.fontawesome.com/a076d05399.js'></script>
 <script src="index.js"></script>
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
