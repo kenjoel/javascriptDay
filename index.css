@@ -1,0 +1,16 @@
+.container{
+    height: 100%;
+    width: 100%;
+}
+
+.banner{
+    position: relative;
+    background-image: url('./images/hannes-wolf-lvknf1xJkfY-unsplash.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#form{
+    position: absolute;
+    bottom: 0px;
+}
