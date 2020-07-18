@@ -44,28 +44,34 @@ Day of the week (d) = ( ( (CC/4) -2*CC-1) + ((5*YY/4) ) + ((26*(MM+1)/10)) + DD 
  DD - is the Day of the month 
 
  mod - is the modulus function ( % )*/
-
-var days = ['Sunday','Monday','Tuesday','Wednesday','Thursday','Friday','Saturday']
-var male = ['Kwasi','Kwadwo','Kwabena','Kwaku','Yaw','Kofi','Kwame']
-var female = ['Akoswa', 'Adwoa','Abenna', 'Akua', 'Yaa', 'Afua', 'Ama']
-
 const data = document.forms[0];
 
 
+
 function cutter(data){
+    var days = ['Sunday','Monday','Tuesday','Wednesday','Thursday','Friday','Saturday']
+    var male = ['Kwasi','Kwadwo','Kwabena','Kwaku','Yaw','Kofi','Kwame']
+    var female = ['Akoswa', 'Adwoa','Abenna', 'Akua', 'Yaa', 'Afua', 'Ama']
+
     var cc = parseInt(data.year.value.slice(0,2));
     var yy = parseInt(data.year.value.slice(1,4));
     var mm  = parseInt(data.month.value);
     var dd = parseInt(data.date.value);
+    var ss = (data.gender.value);
 
-    console.log(cc,yy,mm,dd)
+    console.log(cc,yy,mm,dd,ss);
 
     const formula = ( ( (cc/4) -2*cc-1) + ((5*yy/4) ) + ((26*(mm+1)/10)) + dd ) % 7
 
-    return Math.round(formula);
+    var finali = Math.round(formula);
+    console.log(finali)
+    
+    if(ss === 'male'){
+        console.log(days[finali] + male[finali])
+    }else if(ss === 'female'){
+        console.log(days[finali] + female[finali])
+    }
 }
-
-
 
 
 data.addEventListener('submit', (e) => {
