@@ -1,34 +1,3 @@
-// const date = document.querySelector("#date");
-
-// const month = document.querySelector("#mm");
-
-// const year = document.querySelector("#yy");
-
-// const btn = document.querySelector("#submit");
-
-// const form = document.getElementById("form");
-
-// const gender = document.getElementById("gender");
-
-// form.addEventListener('submit', (e) => {
-//     e.preventDefault();
-//     if(date.value > 31){
-//         alert("enter a valid date");
-//     }else if(month.value > 12){
-//         alert("enter valid month")
-//     } else if(year.value > 2020 || year.value < 1900){
-//         alert("enter a valid year")
-//     }else{
-//         console.log(date.value, month.value, year.value)
-//     }
-// })
-
-// console.log(date.value, month.value, year.value,gender.value)
-
-// function akan(){
-//     var comb = [];
-
-// } 
 
 /*
 Day of the week (d) = ( ( (CC/4) -2*CC-1) + ((5*YY/4) ) + ((26*(MM+1)/10)) + DD ) mod 7
@@ -66,11 +35,14 @@ function cutter(data){
 //console.log to ensure you have the correct inputs
     console.log(cc,yy,mm,dd,ss);
 
+//although there are other means to  get the day, i used the provided formula
     const formula = ( ( (cc/4) -2*cc-1) + ((5*yy/4) ) + ((26*(mm+1)/10)) + dd ) % 7
 
+//round the final result
     var finali = Math.round(formula);
     console.log(finali)
-    
+
+//access the gender and output the Akan
     if(ss === 'male'){
         results.innerHTML= days[finali] + "-" + male[finali]
     }else if(ss === 'female'){
