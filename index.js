@@ -51,6 +51,7 @@ function cutter(data){
 }
 
 
+//prevent a default submission then verify the details when user submits
 data.addEventListener('submit', (e) => {
         e.preventDefault();
         if(data.date.value <= 0 || data.date.value > 31){
