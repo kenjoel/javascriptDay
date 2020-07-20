@@ -44,10 +44,12 @@ Day of the week (d) = ( ( (CC/4) -2*CC-1) + ((5*YY/4) ) + ((26*(MM+1)/10)) + DD 
  DD - is the Day of the month 
 
  mod - is the modulus function ( % )*/
+
+ //access the inputs
 const data = document.forms[0];
 
 
-
+//main function to manipulate the inputs
 function cutter(data){
     var days = ['Sunday','Monday','Tuesday','Wednesday','Thursday','Friday','Saturday']
     var male = ['Kwasi','Kwadwo','Kwabena','Kwaku','Yaw','Kofi','Kwame']
@@ -60,6 +62,8 @@ function cutter(data){
     var dd = parseInt(data.date.value);
     var ss = (data.gender.value);
 
+
+//console.log to ensure you have the correct inputs
     console.log(cc,yy,mm,dd,ss);
 
     const formula = ( ( (cc/4) -2*cc-1) + ((5*yy/4) ) + ((26*(mm+1)/10)) + dd ) % 7
