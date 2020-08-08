@@ -25,21 +25,19 @@ function cutter(data){
     var female = ['Akoswa', 'Adwoa','Abenna', 'Akua', 'Yaa', 'Afua', 'Ama']
     var results = document.getElementById('results')
 
-    var cc = parseInt(data.year.value.slice(0,2));
-    var yy = parseInt(data.year.value.slice(1,4));
-    var mm  = parseInt(data.month.value);
-    var dd = parseInt(data.date.value);
-    var ss = (data.gender.value);
+    var yy = document.getElementById('yy').value
+    var mm  = document.getElementById('mm').value
+    var dd = document.getElementById('date').value
+    var ss = data.gender.value;
 
 
 //console.log to ensure you have the correct inputs
-    console.log(cc,yy,mm,dd,ss);
+    console.log(yy,mm,dd,ss);
 
 //although there are other means to  get the day, i used the provided formula
-    const formula = ( ( (cc/4) -2*cc-1) + ((5*yy/4) ) + ((26*(mm+1)/10)) + dd ) % 7
-
+    const formula = new Date(yy + "/" + mm + "/" +dd);
 //round the final result
-    var finali = Math.round(formula);
+    var finali = formula.getDay();
     console.log(finali)
 
 //access the gender and output the Akan

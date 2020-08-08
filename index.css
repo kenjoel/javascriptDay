@@ -33,3 +33,8 @@ h3{
     justify-content: center;
     text-align: center;
 }
+
+#paleo col{
+    bottom: 0px;
+    position: absolute;
+}
